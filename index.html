@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Swansen Report — News from Wisconsin's North Coast</title>
+<meta name="description" content="Independent Wisconsin news covering Bayfield County, the South Shore, and statewide politics and policy.">
+<style>
+  :root { --ink:#1a1a1a; --muted:#5c5c5c; --rule:#d8d4cc; --paper:#fbfaf7; --accent:#8b1e1e; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--paper); color:var(--ink);
+         font-family: Georgia, "Times New Roman", serif; line-height:1.6; }
+  .wrap { max-width:960px; margin:0 auto; padding:0 24px; }
+  header { border-bottom:3px double var(--ink); padding:32px 0 16px; text-align:center; }
+  .dateline { font-family: system-ui, sans-serif; font-size:.8rem; letter-spacing:.08em;
+              text-transform:uppercase; color:var(--muted); display:flex; justify-content:space-between; }
+  h1.masthead { font-size: clamp(2.4rem, 7vw, 4.5rem); margin:12px 0 4px; letter-spacing:-.01em; }
+  .tagline { font-style:italic; color:var(--muted); margin:0; }
+  nav { border-bottom:1px solid var(--rule); font-family:system-ui, sans-serif; font-size:.9rem; }
+  nav ul { list-style:none; display:flex; flex-wrap:wrap; justify-content:center; gap:28px; margin:0; padding:12px 0; }
+  nav a { color:var(--ink); text-decoration:none; }
+  nav a:hover { color:var(--accent); }
+  main { padding:40px 0; display:grid; grid-template-columns: 2fr 1fr; gap:48px; }
+  @media (max-width: 760px) { main { grid-template-columns:1fr; } }
+  .kicker { font-family:system-ui, sans-serif; font-size:.75rem; font-weight:700; letter-spacing:.1em;
+            text-transform:uppercase; color:var(--accent); }
+  h2 { font-size:2rem; line-height:1.2; margin:6px 0 16px; }
+  h3 { font-size:1.1rem; margin:0 0 8px; border-bottom:1px solid var(--rule); padding-bottom:6px; }
+  .beats { list-style:none; padding:0; margin:0 0 32px; }
+  .beats li { padding:10px 0; border-bottom:1px solid var(--rule); }
+  .beats strong { display:block; }
+  .beats span { color:var(--muted); font-size:.95rem; }
+  aside .editor img { width:100%; aspect-ratio: 4 / 5; object-fit:cover; border:1px solid var(--rule); }
+  aside p { font-size:.95rem; }
+  .button { display:inline-block; background:var(--ink); color:#fff; padding:10px 18px;
+            font-family:system-ui, sans-serif; font-size:.9rem; text-decoration:none; }
+  .button:hover { background:var(--accent); }
+  footer { border-top:3px double var(--ink); padding:20px 0 40px; font-family:system-ui, sans-serif;
+           font-size:.8rem; color:var(--muted); text-align:center; }
+</style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <div class="dateline"><span>Bayfield, Wisconsin</span><span id="today"></span></div>
+      <h1 class="masthead">The Swansen Report</h1>
+      <p class="tagline">Independent news from Wisconsin's north coast</p>
+    </div>
+  </header>
+
+  <nav>
+    <ul class="wrap">
+      <li><a href="#coverage">Coverage</a></li>
+      <li><a href="#about">About</a></li>
+    </ul>
+  </nav>
+
+  <div class="wrap">
+    <main>
+      <section id="coverage">
+        <div class="kicker">Coming soon</div>
+        <h2>A new home for The Swansen Report</h2>
+        <p>This site is under construction. Reporting from Bayfield County, the South Shore, and the State Capitol will appear here soon.</p>
+
+        <h3>What we cover</h3>
+        <ul class="beats">
+          <li><strong>Bayfield County</strong><span>County board, zoning, development and local government.</span></li>
+          <li><strong>The South Shore</strong><span>Communities, business and life along Lake Superior.</span></li>
+          <li><strong>Statewide politics &amp; policy</strong><span>The Legislature, state agencies and the issues shaping Wisconsin.</span></li>
+        </ul>
+
+        <a class="button" href="https://swansenreport.com">Read current coverage →</a>
+      </section>
+
+      <aside id="about">
+        <div class="editor">
+          <h3>From the editor</h3>
+          <img src="/IMG_4180.JPG" alt="Paul Swansen, editor and publisher of The Swansen Report">
+          <p><strong>Paul Swansen</strong> is the editor and publisher of The Swansen Report. A former Navy journalist and broadcast program director, he reports from Bayfield on the people and decisions shaping northern Wisconsin.</p>
+        </div>
+      </aside>
+    </main>
+  </div>
+
+  <footer>
+    <div class="wrap">© <span id="year"></span> The Swansen Report · Bayfield, Wisconsin</div>
+  </footer>
+
+  <script>
+    var d = new Date();
+    document.getElementById('year').textContent = d.getFullYear();
+    document.getElementById('today').textContent =
+      d.toLocaleDateString('en-US', { weekday:'long', month:'long', day:'numeric', year:'numeric' });
+  </script>
+</body>
+</html>
