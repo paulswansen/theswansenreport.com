@@ -1,0 +1,6 @@
+wrangler.jsonc
+CNAME
+.assetsignore
+.git/
+.wrangler/
+node_modules/
