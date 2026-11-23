@@ -1,0 +1,15 @@
+---
+import { Image } from 'astro:assets';
+import Base from '../layouts/Base.astro';
+import { SITE } from '../lib/site';
+import editorPhoto from '../assets/paul-swansen.jpg';
+---
+<Base title="About" description="About The Swansen Report and its editor, Paul Swansen.">
+  <div class="page prose">
+    <h1>About The Swansen Report</h1>
+    <p>The Swansen Report is an independent news publication covering Bayfield County, the South Shore of Lake Superior, and statewide politics and policy in Wisconsin.</p>
+    <Image src={editorPhoto} alt="Paul Swansen" width={320} quality={80} />
+    <p><strong>Paul Swansen</strong> is the editor and publisher. A former Navy journalist and broadcast program director, he reports from Bayfield on the people and decisions shaping northern Wisconsin.</p>
+    <p>Follow along on <a href={SITE.social.facebook}>Facebook</a>, <a href={SITE.social.x}>X</a> and <a href={SITE.social.youtube}>YouTube</a>, or subscribe with <a href="/rss.xml">RSS</a>.</p>
+  </div>
+</Base>

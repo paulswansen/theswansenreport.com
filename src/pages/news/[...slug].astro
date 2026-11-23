@@ -1,0 +1,33 @@
+---
+import { render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import { getPosts, beatName, formatDate } from '../../lib/site';
+
+export async function getStaticPaths() {
+  const posts = await getPosts();
+  return posts.map((post) => ({ params: { slug: post.id }, props: { post } }));
+}
+
+const { post } = Astro.props;
+const { title, description, date, updated, beat, author, dateline, tags, draft } = post.data;
+const { Content } = await render(post);
+---
+<Base title={title} description={description} type="article" published={date}>
+  <article class="article">
+    <header>
+      <a class="kicker" href={`/beat/${beat}/`}>{beatName(beat)}</a>
+      <h1>{draft && '[DRAFT] '}{title}</h1>
+      <p class="dek">{description}</p>
+      <div class="byline">
+        By <strong>{author}</strong> · <time datetime={date.toISOString()}>{formatDate(date)}</time>
+        {updated && <span class="updated"> · Updated {formatDate(updated)}</span>}
+      </div>
+    </header>
+
+    <div class={dateline ? 'prose has-dateline' : 'prose'} style={dateline ? `--dateline: ${JSON.stringify(dateline.toUpperCase() + ' — ')}` : undefined}>
+      <Content />
+    </div>
+
+    {tags.length > 0 && <p class="tags">Filed under: {tags.join(' · ')}</p>}
+  </article>
+</Base>

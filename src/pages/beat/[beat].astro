@@ -1,0 +1,26 @@
+---
+import Base from '../../layouts/Base.astro';
+import StoryItem from '../../components/StoryItem.astro';
+import { BEATS, getPosts } from '../../lib/site';
+
+export function getStaticPaths() {
+  return BEATS.map((b) => ({ params: { beat: b.slug }, props: { beat: b } }));
+}
+
+const { beat } = Astro.props;
+const posts = (await getPosts()).filter((p) => p.data.beat === beat.slug);
+---
+<Base title={beat.name} description={beat.blurb}>
+  <div class="beat-head">
+    <div class="kicker">Section</div>
+    <h1>{beat.name}</h1>
+    <p>{beat.blurb}</p>
+  </div>
+  <div class="beat-list">
+    {posts.length ? (
+      <ul class="story-list">{posts.map((post) => <StoryItem post={post} showBeat={false} />)}</ul>
+    ) : (
+      <p class="empty">No stories in this section yet.</p>
+    )}
+  </div>
+</Base>

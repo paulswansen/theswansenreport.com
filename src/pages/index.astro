@@ -1,0 +1,51 @@
+---
+import { Image } from 'astro:assets';
+import Base from '../layouts/Base.astro';
+import StoryItem from '../components/StoryItem.astro';
+import { BEATS, getPosts, beatName, formatDate, postUrl } from '../lib/site';
+import editorPhoto from '../assets/paul-swansen.jpg';
+
+const posts = await getPosts();
+const [lead, ...rest] = posts;
+const latest = rest.slice(0, 15);
+---
+<Base>
+  <div class="front">
+    <section aria-label="Top stories">
+      {lead ? (
+        <article class="lead">
+          <a class="kicker" href={`/beat/${lead.data.beat}/`}>{beatName(lead.data.beat)}</a>
+          <h2><a href={postUrl(lead)}>{lead.data.draft && '[DRAFT] '}{lead.data.title}</a></h2>
+          <p class="dek">{lead.data.description}</p>
+          <div class="meta">By {lead.data.author} · <time datetime={lead.data.date.toISOString()}>{formatDate(lead.data.date)}</time></div>
+        </article>
+      ) : (
+        <p class="empty">No stories yet.</p>
+      )}
+
+      {latest.length > 0 && (
+        <>
+          <h2 class="section-head">Latest</h2>
+          <ul class="story-list">
+            {latest.map((post) => <StoryItem post={post} />)}
+          </ul>
+        </>
+      )}
+    </section>
+
+    <aside>
+      <h3>Sections</h3>
+      <ul class="beats">
+        {BEATS.map((b) => (
+          <li><a href={`/beat/${b.slug}/`}>{b.name}</a><span>{b.blurb}</span></li>
+        ))}
+      </ul>
+
+      <div class="editor">
+        <h3>From the editor</h3>
+        <Image src={editorPhoto} alt="Paul Swansen, editor and publisher of The Swansen Report" width={480} quality={80} />
+        <p><strong>Paul Swansen</strong> is the editor and publisher of The Swansen Report. A former Navy journalist and broadcast program director, he reports from Bayfield on the people and decisions shaping northern Wisconsin. <a href="/about/">More →</a></p>
+      </div>
+    </aside>
+  </div>
+</Base>

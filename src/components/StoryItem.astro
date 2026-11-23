@@ -1,0 +1,14 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { beatName, formatDate, postUrl } from '../lib/site';
+
+interface Props { post: CollectionEntry<'posts'>; showBeat?: boolean }
+const { post, showBeat = true } = Astro.props;
+const { title, description, date, beat, draft } = post.data;
+---
+<li class="story">
+  {showBeat && <a class="kicker" href={`/beat/${beat}/`}>{beatName(beat)}</a>}
+  <h3><a href={postUrl(post)}>{draft && '[DRAFT] '}{title}</a></h3>
+  <p>{description}</p>
+  <div class="meta"><time datetime={date.toISOString()}>{formatDate(date)}</time></div>
+</li>
