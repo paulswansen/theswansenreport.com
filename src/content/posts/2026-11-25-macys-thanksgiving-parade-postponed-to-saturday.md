@@ -2,7 +2,7 @@
 title: Macy's Thanksgiving Day Parade postponed to Saturday as nor'easter nears
 description: For the first time in its 100-year history, the parade will not step off on Thanksgiving. It moves to Saturday morning, 7:30 a.m. Central.
 date: 2026-11-25
-updated: 2026-11-25
+updated: 2026-11-26
 beat: statewide
 tags: [Thanksgiving, Weather, National]
 ---
