@@ -2,6 +2,7 @@
 title: Macy's Thanksgiving Day Parade postponed to Saturday as nor'easter nears
 description: For the first time in its 100-year history, the parade will not step off on Thanksgiving. It moves to Saturday morning, 7:30 a.m. Central.
 date: 2026-11-25
+updated: 2026-11-25
 beat: statewide
 tags: [Thanksgiving, Weather, National]
 ---
@@ -16,6 +17,10 @@ The reason is wind. City emergency management officials expect gusts of 50 to 60
 
 Balloon crews were already inflating characters on Manhattan's Upper West Side when the call came.
 
+New York Mayor Zohran Mamdani said at an evening news conference that the city made the call together with Macy's, the NYPD and other agencies, and that safety was the top priority. He also said there were no known specific or credible threats against Saturday's rescheduled parade, and he urged New Yorkers to stay off the roads during the storm. "There is no destination worth risking your safety," Mamdani said.
+
+The balloons are coming down in the meantime. Manhattan Borough President Brad Hoylman-Sigal told PIX11 News they would be deflated Wednesday night and reinflated Friday afternoon.
+
 Viewers who tune in Thursday morning won't come away empty-handed. NBC will air a rerun of the 2025 parade in its usual Thanksgiving slot. Last year's broadcast set a viewership record of about 34.3 million people across NBC and Peacock.
 
 The parade has been called off only three times, from 1942 to 1944, during World War II. Weather grounded its balloons once, in 1971. It has never before been moved to another day.
@@ -25,6 +30,9 @@ Wisconsin has no band in this year's lineup. That changes next year: the UW-Eau 
 ## Sources
 
 - [Macy's Thanksgiving Day Parade postponed to Saturday due to expected bad weather](https://www.pbs.org/newshour/nation/macys-thanksgiving-day-parade-postponed-to-saturday-due-to-expected-bad-weather) — Associated Press, via PBS NewsHour, Nov. 25, 2026
+- [Live updates: Macy's Thanksgiving Day Parade postponed](https://pix11.com/news/local-news/macys-thanksgiving-parade-postponed/) — PIX11 News, Nov. 25, 2026
+- [Macy's Thanksgiving Day Parade postponed](https://www.fox21news.com/top-stories/macys-thanksgiving-day-parade-postponed/) — PIX11 via Nexstar (balloon deflation and reinflation), Nov. 25, 2026
+- [Thanksgiving weather live updates](https://www.cnn.com/2026/11/24/us/live-news/thanksgiving-travel) — CNN (Mamdani news conference), Nov. 25, 2026
 - [Macy's Thanksgiving Day Parade is pushed back to Saturday due to weather](https://www.nbcnews.com/news/us-news/macys-thanksgiving-day-parade-weather-delay-rcna611355) — NBC News, Nov. 25, 2026
 - [Macy's Thanksgiving parade postponed for first time in 100-year history](https://www.axios.com/2026/11/25/macys-thanksgiving-parade-2026-balloons-weather) — Axios, Nov. 25, 2026
 - [Macy's Thanksgiving Day parade moving to Saturday due to severe weather](https://abc7ny.com/story/will-macys-parade-balloons-fly-storm-wind-rain-puts-doubt/20078423/) — WABC-TV, Nov. 25, 2026
